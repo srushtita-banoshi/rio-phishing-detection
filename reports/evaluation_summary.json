@@ -1,0 +1,17 @@
+{
+  "timestamp_utc": "2026-11-01T07:58:17Z",
+  "realtime_latency": {
+    "mean_ms": 5.9845,
+    "median_ms": 5.45,
+    "p95_ms": 7.4784999999999995,
+    "min_ms": 5.24,
+    "max_ms": 27.93
+  },
+  "threads_summary": {
+    "status": "loaded",
+    "threads_sampled": 100,
+    "total_turns": 517,
+    "mean_turns_per_thread": 5.17,
+    "max_turns_in_thread": 10
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "dataset_name": "C_intent_transitions",
+  "synthetic": true,
+  "generator_version": "1.0.0",
+  "seed": 20261031,
+  "row_count": 1000,
+  "output_file": "synthetic_intent_transitions.csv",
+  "columns": [
+    "thread_id",
+    "template_family",
+    "scenario_id",
+    "previous_email_id",
+    "current_email_id",
+    "previous_email",
+    "current_email",
+    "previous_intent",
+    "current_intent",
+    "previous_requested_action",
+    "current_requested_action",
+    "transition_label",
+    "transition_subtype",
+    "supporting_evidence",
+    "synthetic"
+  ],
+  "generated_at_utc": "2026-10-31T10:56:08.865611+00:00",
+  "intended_use": "Pipeline development only; not evidence of real-world performance.",
+  "future_real_data_policy": "Keep real-world datasets in a separate directory and metadata record."
+}

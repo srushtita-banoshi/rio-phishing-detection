@@ -1,0 +1,28 @@
+{
+  "dataset": "synthetic_intent_emails.csv",
+  "synthetic_only_warning": "These metrics measure performance on synthetic data and do not demonstrate real-world intent understanding.",
+  "seed": 20261031,
+  "split": {
+    "method": "GroupShuffleSplit by scenario_id",
+    "train_rows": 800,
+    "test_rows": 200,
+    "overlapping_groups": 0
+  },
+  "requested_action_extraction": {
+    "method": "lightweight regular-expression request phrase extraction",
+    "test_nonempty_rate": 0.695
+  },
+  "semantic_model": {
+    "name": "all-MiniLM-L6-v2",
+    "status": "skipped"
+  },
+  "models": {
+    "tfidf_logistic_regression": {
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "mean_confidence": 0.89509670760137
+    }
+  }
+}

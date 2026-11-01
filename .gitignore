@@ -1,0 +1,25 @@
+# Python Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Testing & Reports
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Streamlit Local User Settings
+.streamlit/credentials.toml
+
+# OS & Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

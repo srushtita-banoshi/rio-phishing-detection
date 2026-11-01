@@ -1,0 +1,21 @@
+{
+  "dataset_name": "B_intent_extraction",
+  "synthetic": true,
+  "generator_version": "1.0.0",
+  "seed": 20261031,
+  "row_count": 1000,
+  "output_file": "synthetic_intent_emails.csv",
+  "columns": [
+    "email_id",
+    "template_family",
+    "scenario_id",
+    "email_text",
+    "intent_label",
+    "requested_action",
+    "action_target",
+    "synthetic"
+  ],
+  "generated_at_utc": "2026-10-31T10:48:18.243685+00:00",
+  "intended_use": "Pipeline development only; not evidence of real-world performance.",
+  "future_real_data_policy": "Keep real-world datasets in a separate directory and metadata record."
+}

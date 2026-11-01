@@ -1,0 +1,81 @@
+{
+  "dataset": "synthetic_intent_transitions.csv",
+  "synthetic_only_warning": "These metrics measure performance on synthetic data and do not demonstrate real-world intent-shift detection.",
+  "seed": 20261031,
+  "features": [
+    "intent_same",
+    "action_same",
+    "text_similarity",
+    "current_intent_sensitive",
+    "current_email_urgent"
+  ],
+  "semantic_similarity": "TF-IDF cosine similarity between previous and current email text",
+  "split": {
+    "method": "GroupShuffleSplit by scenario_id",
+    "train_rows": 780,
+    "test_rows": 220,
+    "overlapping_groups": 0
+  },
+  "models": {
+    "rule_based": {
+      "accuracy": 0.8090909090909091,
+      "precision_macro": 0.8627450980392157,
+      "recall_macro": 0.86,
+      "f1_macro": 0.8249726519768714,
+      "by_transition_label": {
+        "legitimate intent change": {
+          "count": 60,
+          "predicted_correctly": 60
+        },
+        "normal continuation": {
+          "count": 60,
+          "predicted_correctly": 60
+        },
+        "suspicious intent shift": {
+          "count": 100,
+          "predicted_correctly": 58
+        }
+      }
+    },
+    "logistic_regression": {
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "by_transition_label": {
+        "legitimate intent change": {
+          "count": 60,
+          "predicted_correctly": 60
+        },
+        "normal continuation": {
+          "count": 60,
+          "predicted_correctly": 60
+        },
+        "suspicious intent shift": {
+          "count": 100,
+          "predicted_correctly": 100
+        }
+      }
+    },
+    "random_forest": {
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "by_transition_label": {
+        "legitimate intent change": {
+          "count": 60,
+          "predicted_correctly": 60
+        },
+        "normal continuation": {
+          "count": 60,
+          "predicted_correctly": 60
+        },
+        "suspicious intent shift": {
+          "count": 100,
+          "predicted_correctly": 100
+        }
+      }
+    }
+  }
+}

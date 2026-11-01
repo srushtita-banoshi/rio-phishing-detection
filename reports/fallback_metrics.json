@@ -1,0 +1,80 @@
+{
+  "dataset": "synthetic_intent_transitions.csv",
+  "synthetic_only_warning": "These metrics measure synthetic-data fallback behavior and do not demonstrate real-world performance.",
+  "seed": 20261031,
+  "experiment": {
+    "same_current_email": true,
+    "conditions": [
+      "full_history",
+      "partial_history",
+      "no_previous_messages"
+    ],
+    "missing_history_feature_used": false,
+    "split": "GroupShuffleSplit by scenario_id",
+    "train_rows": 780,
+    "test_rows": 220,
+    "overlapping_groups": 0
+  },
+  "models": {
+    "full_history": {
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "by_transition_label": {
+        "legitimate intent change": {
+          "count": 60,
+          "correct": 60
+        },
+        "normal continuation": {
+          "count": 60,
+          "correct": 60
+        },
+        "suspicious intent shift": {
+          "count": 100,
+          "correct": 100
+        }
+      }
+    },
+    "partial_history": {
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "by_transition_label": {
+        "legitimate intent change": {
+          "count": 60,
+          "correct": 60
+        },
+        "normal continuation": {
+          "count": 60,
+          "correct": 60
+        },
+        "suspicious intent shift": {
+          "count": 100,
+          "correct": 100
+        }
+      }
+    },
+    "no_previous_messages": {
+      "accuracy": 0.7272727272727273,
+      "precision_macro": 0.5,
+      "recall_macro": 0.6666666666666666,
+      "f1_macro": 0.5555555555555555,
+      "by_transition_label": {
+        "legitimate intent change": {
+          "count": 60,
+          "correct": 0
+        },
+        "normal continuation": {
+          "count": 60,
+          "correct": 60
+        },
+        "suspicious intent shift": {
+          "count": 100,
+          "correct": 100
+        }
+      }
+    }
+  }
+}

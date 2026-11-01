@@ -1,0 +1,31 @@
+{
+  "dataset_name": "A_phishing_emails",
+  "synthetic": true,
+  "generator_version": "1.0.0",
+  "seed": 20261031,
+  "row_count": 2000,
+  "output_file": "synthetic_phishing_emails.csv",
+  "columns": [
+    "email_id",
+    "template_family",
+    "scenario_id",
+    "subject",
+    "body",
+    "sender_email",
+    "sender_domain",
+    "urls",
+    "url_count",
+    "domain_uses_https",
+    "domain_has_subdomain",
+    "authentication_result",
+    "has_attachment",
+    "attachment_type",
+    "urgency_indicator_count",
+    "label",
+    "label_name",
+    "synthetic"
+  ],
+  "generated_at_utc": "2026-10-31T10:48:18.224386+00:00",
+  "intended_use": "Pipeline development only; not evidence of real-world performance.",
+  "future_real_data_policy": "Keep real-world datasets in a separate directory and metadata record."
+}
